@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package beget.emitter.v1.vps;
+
+message VpsRemovedEvent {
+    // Идентификатор Vps (uuid)
+    string id = 1;
+}
+
+message VpsReinstalledEvent {
+    // Идентификатор Vps (uuid)
+    string vps_id = 1;
+
+    // Идентификатор заявки на переустановку
+    string order_id = 2;
+}
+
+message VpsCreatedEvent {
+    // Идентификатор Vps (uuid)
+    string id = 1;
+}
+
+message VpsConfigurationChangedEvent {
+    // Идентификатор Vps (uuid)
+    string vps_id = 1;
+
+    // Идентификатор заявки на смену конфигурации
+    uint32 order_id = 2;
+}
+
+message VpsPasswordChangedEvent {
+    // Идентификатор Vps (uuid)
+    string vps_id = 1;
+
+    // Новый пароль
+    string password = 2;
+}
+
+message VpsBlockedEvent {
+    // Идентификатор Vps (uuid)
+    string id = 1;
+
+    // Опицональный комментарий к блокировке
+    string comment = 2;
+}
+
+message VpsStartedEvent {
+    // Идентификатор Vps (uuid)
+    string id = 1;
+}
+
+message VpsStoppedEvent {
+    // Идентификатор Vps (uuid)
+    string id = 1;
+}
+
+message VpsInfoUpdatedEvent {
+    // Идентификатор Vps (uuid)
+    string id = 1;
+}
+
+message VpsMigrationCompletedEvent {
+    // Идентификатор Vps (uuid)
+    string vps_id = 1;
+
+    uint32 migration_id = 2;
+}
