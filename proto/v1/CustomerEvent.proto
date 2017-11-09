@@ -3,9 +3,9 @@ syntax = "proto3";
 package beget.emitter.v1.customer;
 
 message CustomerBlocked {
-    bool isBlocked = 1;
+
 }
 
 message CustomerUnBlocked {
-    bool isBlocked = 1;
+
 }
