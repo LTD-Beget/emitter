@@ -10,10 +10,16 @@ message CustomerUnBlocked {
 
 }
 
+message CustomerCpCacheGeneratedEvent {
+
+}
+
+// Временно оставляем для совместимости
 message CustomerUpdate {
 
 }
 
+// Временно оставляем для совместимости
 message TicketReply {
 
 }
