@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package beget.emitter.v1.cloud;
+
+// cloud.service.created
+message ServiceCreatedEvent {
+    string service_id = 1;
+}
+
+// cloud.service.removed
+message ServiceRemovedEvent {
+    string service_id = 1;
+}
+
+// cloud.service.status.updated
+message ServiceStatusUpdatedEvent {
+    string service_id = 1;
+}
+
+// cloud.service.updated
+message ServiceUpdatedEvent {
+    string service_id = 1;
+}
+
+// cloud.service.configuration.changed
+message ServiceConfigurationChangedEvent {
+    string service_id = 1;
+}
+
+// cloud.mysql.db.created
+message MysqlDbCreatedEvent {
+    string service_id = 1;
+    string db_name = 2;
+}
+
+// cloud.mysql.db.removed
+message MysqlDbRemovedEvent {
+    string service_id = 1;
+    string db_name = 2;
+}
+
+// cloud.mysql.db.access.created
+message MysqlDbAccessCreatedEvent {
+    string service_id = 1;
+    string db_name = 2;
+    string access_host = 3;
+}
+
+// cloud.mysql.db.access.removed
+message MysqlDbAccessRemovedEvent {
+    string service_id = 1;
+    string db_name = 2;
+    string access_host = 3;
+}
+
+// cloud.mysql.db.access.password.changed
+message MysqlDbAccessPasswordChangedEvent {
+    string service_id = 1;
+    string db_name = 2;
+    string access_host = 3;
+}
+
+// cloud.mysql.db.updated
+message MysqlDbUpdatedEvent {
+    string service_id = 1;
+    string db_name = 2;
+}
+
+// cloud.mysql.db.config.set
+message MysqlConfigSetEvent {
+    string service_id = 1;
+}
