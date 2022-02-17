@@ -70,3 +70,9 @@ message MysqlDbUpdatedEvent {
 message MysqlConfigSetEvent {
     string service_id = 1;
 }
+
+// cloud.mysql.software.installed
+message MysqlSoftwareInstalledEvent {
+    string service_id = 1;
+    string software_name = 2;
+}
