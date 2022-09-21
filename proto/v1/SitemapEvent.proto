@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package beget.emitter.v1.sitemap;
+
+message SitemapOrderCreatedEvent {
+    uint64 order_id = 1;
+    string fqdn = 2;
+}
+
+message SitemapOrderChangedEvent {
+    uint64 order_id = 1;
+    string fqdn = 2;
+}
