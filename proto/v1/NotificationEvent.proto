@@ -2,5 +2,5 @@ syntax = "proto3";
  
 package beget.emitter.v1.notification;
  
-message TelegramConnectedUserAddedEvent {
+message CustomerSubscribedEvent {
 }
