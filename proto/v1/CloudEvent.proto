@@ -76,3 +76,55 @@ message MysqlSoftwareInstalledEvent {
     string service_id = 1;
     string software_name = 2;
 }
+
+// cloud.postgresql.db.created
+message PostgresqlDbCreatedEvent {
+    string service_id = 1;
+    string db_name = 2;
+}
+
+// cloud.postgresql.db.removed
+message PostgresqlDbRemovedEvent {
+    string service_id = 1;
+    string db_name = 2;
+}
+
+// cloud.postgresql.db.updated
+message PostgresqlDbUpdatedEvent {
+    string service_id = 1;
+    string db_name = 2;
+}
+
+// cloud.postgresql.role.created
+message PostgresqlRoleCreatedEvent {
+    string service_id = 1;
+    string role_name = 2;
+}
+
+// cloud.postgresql.role.removed
+message PostgresqlRoleRemovedEvent {
+    string service_id = 1;
+    string role_name = 2;
+}
+
+// cloud.postgresql.role.updated
+message PostgresqlRoleUpdatedEvent {
+    string service_id = 1;
+    string role_name = 2;
+}
+
+// cloud.postgresql.network.access.updated
+message PostgresqlNetworkAccessUpdatedEvent {
+    string service_id = 1;
+}
+
+// cloud.postgresql.software.installed
+message PostgresqlSoftwareInstalledEvent {
+    string service_id = 1;
+    string software_name = 2;
+}
+
+// cloud.postgresql.config.set
+message PostgresqlConfigSetEvent {
+    string service_id = 1;
+}
