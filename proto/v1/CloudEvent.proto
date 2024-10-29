@@ -27,6 +27,27 @@ message ServiceConfigurationChangedEvent {
     string service_id = 1;
 }
 
+// cloud.service.backup.restore.processing
+message ServiceBackupRestoreProcessingEvent {
+    string type = 1;
+    uint64 order_id = 2;
+    string service_id = 3;
+}
+
+// cloud.service.backup.restore.completed
+message ServiceBackupRestoreCompletedEvent {
+    string type = 1;
+    uint64 order_id = 2;
+    string service_id = 3;
+}
+
+// cloud.service.backup.restore.error
+message ServiceBackupRestoreErrorEvent {
+    string type = 1;
+    uint64 order_id = 2;
+    string service_id = 3;
+}
+
 // cloud.mysql.db.created
 message MysqlDbCreatedEvent {
     string service_id = 1;
