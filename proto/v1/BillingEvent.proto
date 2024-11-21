@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package beget.emitter.v1.billing;
+
+enum PrepayType {
+    BILL = 0;
+    BITCOIN = 1;
+    COMPAY = 2;
+    LIQPAY = 3;
+    PAYPAL = 4;
+    QIWI = 5;
+    QIWI_UA = 6;
+    RBK = 7;
+    RECEIPT = 8;
+    ROBO_ALL = 9;
+    ROBO_CARD = 10;
+    ROBO_YANDEX = 11;
+    WM = 12;
+    WMR = 13;
+    WMZ = 14;
+    YANDEX_CARD = 15;
+    YANDEX_REPEAT = 16;
+    YANDEX_WALLET = 17;
+    YANDEX_WM = 18;
+    APPLE_PAY = 19;
+    GOOGLE_PAY = 20;
+    LIQPAY_REPEAT = 21;
+    FONDY = 22;
+    CLOUDPAYMENTS = 23;
+    CLOUDPAYMENTS_KZ = 24;
+    PAYBOX = 25;
+    PAYSELECTION = 26;
+    PAYKEEPER = 27;
+}
+
+message BillingPrepayConfirmEvent {
+    uint32 payment_id = 1;
+    string external_payment_id = 2;
+    PrepayType type = 3;
+    uint32 customer_id  = 4;
+    uint32 payer_id = 5;
+}
