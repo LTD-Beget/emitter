@@ -5,6 +5,3 @@ package beget.emitter.v1.vps.image;
 message VpsImageUpdatedEvent {
   string image_id = 1;
 }
-
-message RegionsUpdatedEvent {
-}
