@@ -8,8 +8,12 @@ message VpsImageUpdatedEvent {
 
 message VpsImageCreatedEvent {
     string image_id = 1;
+
+    string name = 2;
 }
 
 message VpsImageCreationErrorEvent {
     string image_id = 1;
+
+    string name = 2;
 }
