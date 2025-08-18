@@ -4,21 +4,21 @@ package beget.emitter.v1.sitemap;
 
 // Событие об успешном создании заявки на генерацию sitemap
 // sitemap.order.created
-message SitemapOrderCreated {
+message SitemapOrderCreatedEvent {
   // Идентификатор заявки на генерацию sitemap
   uint64 order_id = 1;
 }
 
 // Событие об успешном завершении генерации sitemap
 // sitemap.order.completed
-message SitemapOrderCompleted {
+message SitemapOrderCompletedEvent {
   // Идентификатор заявки на генерацию sitemap
   uint64 order_id = 1;
 }
 
 // Событие об ошибке при генерации sitemap
 // sitemap.order.failed
-message SitemapOrderFailed {
+message SitemapOrderFailedEvent {
   // Идентификатор заявки на генерацию sitemap
   uint64 order_id = 1;
 
@@ -28,14 +28,14 @@ message SitemapOrderFailed {
 
 // Событие об отмене заявки на генерацию sitemap
 // sitemap.order.canceled
-message SitemapOrderCanceled {
+message SitemapOrderCanceledEvent {
   // Идентификатор заявки на генерацию sitemap
   uint64 order_id = 1;
 }
 
 // Событие о том, что дальнейшее выполнение заявки невозможно: пользователь достиг лимитов.
 // sitemap.order.limited
-message SitemapOrderLimited {
+message SitemapOrderLimitedEvent {
   // Идентификатор заявки на генерацию sitemap
   uint64 order_id = 1;
 }
