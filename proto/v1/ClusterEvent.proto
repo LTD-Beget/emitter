@@ -2,7 +2,17 @@ syntax = "proto3";
 
 package beget.emitter.v1.k8s;
 
-message K8sChangedEvent {
+message ClusterChangedEvent {
     // Идентификатор Кластера (uuid)
     string cluster_id = 1;
+}
+
+message WorkerGroupAddedEvent {
+    // Идентификатор Кластера (uuid)
+    string group_id = 1;
+}
+
+message WorkerGroupRemovedEvent {
+    // Идентификатор Кластера (uuid)
+    string group_id = 1;
 }
