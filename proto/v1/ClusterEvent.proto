@@ -8,11 +8,11 @@ message ClusterChangedEvent {
 }
 
 message WorkerGroupAddedEvent {
-    // Идентификатор Кластера (uuid)
+    // Идентификатор воркер группы
     string group_id = 1;
 }
 
 message WorkerGroupRemovedEvent {
-    // Идентификатор Кластера (uuid)
+    // Идентификатор воркер группы
     string group_id = 1;
 }
