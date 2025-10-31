@@ -2,16 +2,19 @@ syntax = "proto3";
 
 package beget.emitter.v1.k8s;
 
+// Событие об успешном изменении кластера
 message ClusterChangedEvent {
     // Идентификатор Кластера (uuid)
     string cluster_id = 1;
 }
 
+// Событие об успешном добавлении воркер группы
 message WorkerGroupAddedEvent {
     // Идентификатор воркер группы
     string group_id = 1;
 }
 
+// Событие об успешном удалении воркер группы
 message WorkerGroupRemovedEvent {
     // Идентификатор воркер группы
     string group_id = 1;
