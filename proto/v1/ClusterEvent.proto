@@ -5,13 +5,13 @@ package beget.emitter.v1.k8s;
 // Событие об успешном создании кластера
 message ClusterCreatedEvent {
     // Идентификатор Кластера (uuid)
-    string id = 1;
+    string cluster_id = 1;
 }
 
 // Событие об успешном удалении кластера
 message ClusterRemovedEvent {
     // Идентификатор Кластера (uuid)
-    string id = 1;
+    string cluster_id = 1;
 }
 
 
