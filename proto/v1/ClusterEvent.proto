@@ -2,6 +2,19 @@ syntax = "proto3";
 
 package beget.emitter.v1.k8s;
 
+// Событие об успешном создании кластера
+message ClusterCreatedEvent {
+    // Идентификатор Кластера (uuid)
+    string id = 1;
+}
+
+// Событие об успешном удалении кластера
+message ClusterRemovedEvent {
+    // Идентификатор Кластера (uuid)
+    string id = 1;
+}
+
+
 // Событие об успешном изменении кластера
 message ClusterChangedEvent {
     // Идентификатор Кластера (uuid)
@@ -18,4 +31,28 @@ message WorkerGroupAddedEvent {
 message WorkerGroupRemovedEvent {
     // Идентификатор воркер группы
     string group_id = 1;
+}
+
+// Событие об успешном изменении воркер группы
+message WorkerGroupChangedEvent {
+    // Идентификатор воркер группы
+    string group_id = 1;
+}
+
+// Событие об успешной установке аддона
+message AddonInstalledEvent {
+    // Название аддона
+    string name = 1;
+}
+
+// Событие об успешной переустановке аддона
+message AddonReinstalledEvent {
+    // Название аддона
+    string name = 1;
+}
+
+// Событие об успешном удалении аддона
+message AddonDeletedEvent {
+    // Название аддона
+    string name = 1;
 }
