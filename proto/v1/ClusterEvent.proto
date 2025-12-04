@@ -51,7 +51,7 @@ message AddonReinstalledEvent {
     string cluster_id = 1;
 
     // Название аддона
-    string name = 1;
+    string name = 2;
 }
 
 // Событие об успешном удалении аддона
@@ -60,5 +60,5 @@ message AddonDeletedEvent {
     string cluster_id = 1;
     
     // Название аддона
-    string name = 1;
+    string name = 2;
 }
