@@ -47,12 +47,18 @@ message AddonInstalledEvent {
 
 // Событие об успешной переустановке аддона
 message AddonReinstalledEvent {
+    // Идентификатор Кластера (uuid)
+    string cluster_id = 1;
+
     // Название аддона
     string name = 1;
 }
 
 // Событие об успешном удалении аддона
 message AddonDeletedEvent {
+    // Идентификатор Кластера (uuid)
+    string cluster_id = 1;
+    
     // Название аддона
     string name = 1;
 }
