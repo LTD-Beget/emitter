@@ -48,6 +48,16 @@ message WorkerGroupChangedEvent {
     string cluster_id = 2;
 }
 
+// Событие о начале установки аддона
+message AddonCreatedEvent {
+    // Название аддона
+    string name = 1;
+
+    // Идентификатор Кластера (uuid)
+    string cluster_id = 2;
+
+}
+
 // Событие об успешной установке аддона
 message AddonInstalledEvent {
     // Название аддона
